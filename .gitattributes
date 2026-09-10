@@ -1,0 +1,13 @@
+# 默认按文本处理，行尾在仓库内统一规范为 LF
+* text=auto
+
+# Shell 脚本必须检出为 LF —— Windows 上 autocrlf=true 会注入 CR，
+# 导致 bash/WSL 执行时报 $'\r': command not found
+*.sh text eol=lf
+
+# PowerShell 脚本检出为 CRLF（Windows 原生约定）
+*.ps1 text eol=crlf
+
+# 文档与配置统一 LF
+*.md text eol=lf
+*.py text eol=lf
