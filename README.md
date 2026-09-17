@@ -13,6 +13,7 @@
 | [`pg-aiguide-mcp-usage`](pg-aiguide-mcp-usage/SKILL.md) | PostgreSQL / TimescaleDB / PostGIS / pgvector 的建表选型、索引、hypertable、向量检索、零停机迁移 |
 | [`nushell-style`](nushell-style/SKILL.md) | 编写任何 Nushell 代码时的写法约束与语法陷阱。与执行方式无关，MCP、`nu -c`、`.nu` 脚本均适用 |
 | [`nushell-mcp-usage`](nushell-mcp-usage/SKILL.md) | 配置与调用 nushell MCP：stdio 接入验证、三工具分工、`$history` 索引复用、安全边界 |
+| [`serena`](serena/SKILL.md) | 驱动 Serena MCP 做符号级检索/编辑：项目激活与 `No active project` 排障、`name_path` 寻址、按上下文变化的工具面、`rename_symbol`/`safe_delete_symbol` 引用感知重构、记忆与 `mem:` 引用、omp 接线与 `PYTHONHOME` 污染等故障 |
 | [`herdr`](herdr/SKILL.md) | 控制 Herdr 终端复用器的 pane / tab / workspace（仅在用户明确提及 Herdr 时使用） |
 
 `nushell-style` 与 `nushell-mcp-usage` 按触发面拆分：前者管「怎么写」，后者管「怎么调」，双向交叉引用。
@@ -39,6 +40,7 @@ git clone https://github.com/zerobiubiu/agent-skills.git ~/.agents/skills
 - `rust-docs-mcp-guide` — `rust-docs-mcp` CLI 或对应 MCP server
 - `pg-aiguide-mcp-usage` — pg-aiguide MCP server
 - `nushell-mcp-usage` — nushell + 其 MCP 接入（`nu --mcp`）
+- `serena` — Serena CLI/MCP（`uv tool install -p 3.13 serena-agent`）+ 在 omp `mcp.json` 中挂载 `serena` server
 - `herdr` — Herdr 运行环境（`HERDR_ENV=1`）
 
 ## 许可
